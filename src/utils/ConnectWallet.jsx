@@ -24,8 +24,7 @@ const ConnectWallet = () => {
 
   return (
     <>
-      <button onClick={connectWallet}>Connect</button>
-      <h1>{account.length ? account : ""}</h1>
+      <button onClick={connectWallet}>Connect wallet</button>
     </>
   );
 };

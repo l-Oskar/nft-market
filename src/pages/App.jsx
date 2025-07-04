@@ -1,12 +1,14 @@
-import ConnectWallet from "../utils/ConnectWallet";
+import Header from "./Header";
 import ThemeToggle from "../utils/ThemeToggle";
+import MainSection from "./MainSection";
 
 function App() {
   return (
     <>
-      <h1>Home</h1>
-      <ThemeToggle />
-      <ConnectWallet />
+      <div className="bg-fuchsia-800">
+        <Header />
+      </div>
+      <MainSection />
     </>
   );
 }

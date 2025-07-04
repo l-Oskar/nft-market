@@ -83,7 +83,7 @@ a:hover {
 }
 
 button {
-  padding: 1rem;
+  padding: 0.6rem;
   border: 1px solid var(--primary-color);
   border-radius: 1rem;
 }
@@ -112,4 +112,25 @@ hr {
 
 .text-muted {
   color: var(--secondary-color);
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
 }

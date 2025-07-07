@@ -1,35 +1,24 @@
 import React from "react";
+import { nfts } from "../utils/info";
 
 const MainSection = () => {
   return (
     <>
-      <div className="container grid my-5">
+      <div className="container grid my-10">
         <h1 className="text-center">Main Page</h1>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 h-50 justify-center">
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            1
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            2
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            3
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            4
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            5
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            6
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            7
-          </span>
-          <span className="h-48 bg-amber-500 rounded-xl flex items-center justify-center">
-            8
-          </span>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 my-10 justify-center">
+          {nfts.map((nft) => (
+            <span
+              id={nft.id}
+              className={
+                "mx-auto border rounded-xl w-45 h-45 flex justify-center items-center " +
+                (nft.id % 2 == 0
+                  ? "sm:mt-0 md:mt-10 bg-cyan-600"
+                  : "bg-cyan-300")
+              }>
+              {nft.name}
+            </span>
+          ))}
         </div>
       </div>
     </>

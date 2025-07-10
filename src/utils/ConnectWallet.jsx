@@ -24,7 +24,11 @@ const ConnectWallet = () => {
 
   return (
     <>
-      <button onClick={connectWallet}>Connect wallet</button>
+      <button onClick={connectWallet}>
+        {account
+          ? account.slice(0, 6) + "..." + account.slice(-5, -1)
+          : "Connect Wallet"}
+      </button>
     </>
   );
 };
